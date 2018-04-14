@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ES6语法学习01</title>
+	<link rel="stylesheet" href="">
+</head>
+<script>
+	/*
+		ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
+	*/
+
+	{
+		let a = 10;
+	}
+
+	console.log(a); 
+	/*
+		跨作用与访问无效，报错“ReferenceError: a is not defined”
+	*/
+	
+	/*
+		如果使用var的话，JS会自动做变量提升，此时上面的console.log(a);不会报错，但“a”的值等于undefind
+	*/
+
+	{
+		var a = 20;
+	}
+
+	console.log(a);
+
+	/*
+		上面代码在代码块之中，分别用let和var声明了两个变量。然后在代码块之外调用这两个变量，结果let声明的变量报错，var声明的变量返回了正确的值。这表明，let声明的变量只在它所在的代码块有效。
+	*/
+
+	
+</script>
+<body>
+	
+</body>
+</html>
